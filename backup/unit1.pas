@@ -378,14 +378,14 @@ begin
       Comm1.StartComm;
 
       shpcom.Brush.Color:=clred;
-      shpcom.Pen.Color  :=clwhite;
+      shpcom.Pen.Color  :=clred;//clwhite;
       btnopencom.Caption :='关闭串口';
       ShowStatus;
      except on E:Exception do //拦截所有异常
      begin
       btnopencom.Caption :='打开串口';
       shpcom.Brush.Color:=clblack;
-      shpcom.Pen.Color  :=clwhite;
+      shpcom.Pen.Color  :=clblack;//clwhite;
       Comm1.StopComm;
       showmessage('打开串口错误，错误信息：'+e.message);
      end;
